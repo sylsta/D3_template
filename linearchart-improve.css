@@ -1,0 +1,27 @@
+#svg {
+    display: block;
+    margin: auto;
+}
+
+#chart {
+    margin-top: 20px;
+    border: 1px solid #DEDEDE;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.horizontalGrid {
+    fill : none;
+    shape-rendering : crispEdges;
+    stroke : lightgrey;
+    stroke-width : 1px;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
