@@ -1,3 +1,42 @@
-#svg1 {
-    height: 575px;
+
+#info {
+    margin-top: 50px;
+}
+
+#deptinfo {
+    margin-top: 30px;
+}
+
+.country {
+    fill: #999;
+    stroke: black;
+    stroke-width: 0.5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.country:hover {
+    stroke-width: 1px;
+}
+
+div.tooltip {
+    position: absolute;
+    opacity:0.8;
+    z-index:1000;
+    text-align:left;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    padding:8px;
+    color:#fff;
+    background-color:#000;
+    font: 12px sans-serif;
+    max-width: 300px;
+    height: 45px;
+}
+
+#svg {
+    display: block;
+    margin: auto;
 }
