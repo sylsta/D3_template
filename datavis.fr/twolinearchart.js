@@ -30,7 +30,7 @@ const svg = d3.select("#chart").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var map = {};
-d3.tsv("twolinearchart.cac40VSchomage.txt").then(function(data) {
+d3.tsv("d3js/twolinearchart/cac40VSchomage.txt").then(function(data) {
     data.forEach(function(d) {
         d.date = parseTime(d.date);
         d.chomage = +d.chomage;

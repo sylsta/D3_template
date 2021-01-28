@@ -34,7 +34,7 @@ const svg = d3.select("#chart").append("svg")
 // On demande à D3JS de charger notre fichier
 // On déclare également une map qui servira un peu plus bas pour l'affichage du tooltip
 var map = {};
-d3.tsv("linearchart.data.tsv").then(function(data) {
+d3.tsv("d3js/linearchart/data.tsv").then(function(data) {
     // Conversion des données du fichier, parsing des dates et '+' pour expliciter une valeur numérique.
     data.forEach(function(d) {
         d.date = parseTime(d.date);

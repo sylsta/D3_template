@@ -47,7 +47,7 @@ svg.append("text")
 // la date et la formatter, on n'oublie pas de passer en numérique la colonne du cours, on trie les données,
 // on met à jour les domaines puis on ajoute les axes au graphique. Enfin on ajoute les lignes horizontales
 // et la ligne correspondant au cours de l'or.
-d3.tsv("linearchart-improve.data.tsv", function(error, data) {
+d3.tsv("d3js/linearchart-improve/data.tsv", function(error, data) {
     data.forEach(d => {
         d.date = parseTime(d.date);
         d.close = +d.close;

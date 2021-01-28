@@ -17,7 +17,8 @@ const svg = d3.select("#chart").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("barchart.data.tsv", function(error, data) {
+// d3.tsv("data.tsv", function(error, data) {
+d3.tsv("d3js/barchart/data.tsv").then(function(data) {
     data.forEach(d => d.population = +d.population);
 
     x.domain(data.map(d => d.country));
