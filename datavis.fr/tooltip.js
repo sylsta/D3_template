@@ -1,18 +1,18 @@
 
     const width = $("#svgDiv").width(),
-    height = 500;
+		height = 500;
 
     const svg = d3.select('#svgDiv').append("svg")
-    .attr("id", "svg")
-    .attr("width", width)
-    .attr("height", height);
+		.attr("id", "svg")
+		.attr("width", width)
+		.attr("height", height);
 
     const eetooltip = new EETooltip({
-    'svgId': 'svg',
-    'tooltipId': 'tooltipDiv',
-    'headerText': "Information",
-    'footerText': "Données DataVis 2015"
-});
+		'svgId': 'svg',
+		'tooltipId': 'tooltipDiv',
+		'headerText': "Information",
+		'footerText': "Données DataVis 2015"
+	});
 
     const group = svg.append("g");
     for (var i = 0; i < 22; ++i) {
@@ -31,7 +31,7 @@
 			eetooltip.show();
 		});
 	
-		rect.on("mouseout", function(d) {
+    rect.on("mouseout", function(d) {
 			eetooltip.hide();
 			eetooltip.removeAllDataBlocks();
 		});
