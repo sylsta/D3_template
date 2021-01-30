@@ -1,4 +1,4 @@
-// Le code est similaire à celui des précédent p
+// Le code est similaire à celui des précédent
 
 const width = document.getElementById("container").offsetWidth * 0.95,
     height = 600;

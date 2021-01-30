@@ -1,3 +1,4 @@
+
 // https://www.datavis.fr/index.php?page=linearchart
 
 // Comme pour le Bar Chart, nous commençons par établir les dimensions et les marges de notre graphique. Notez que la
