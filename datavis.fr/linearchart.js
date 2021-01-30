@@ -13,17 +13,23 @@ const margin = {top: 20, right: 30, bottom: 30, left: 60},
 const parseTime = d3.timeParse("%d/%m/%Y");
 const dateFormat = d3.timeFormat("%d/%m/%Y");
 
-//  Comme précédement, nous définissons la projection utilisée pour les deux axes (en fonction de la date pour l'axe X et linéaire pour l'axe Y).
+//  Comme précédement, nous définissons la projection utilisée pour les deux axes (en fonction de la date pour l'axe X
+//  et linéaire pour l'axe Y).
 const x = d3.scaleTime()
     .range([0, width]);
 const y = d3.scaleLinear()
     .range([height, 0]);
 
-// Ici nous définissons la fonction qui sera utilisée pour construire la courbe de notre graphique. Celle-ci utilise la donnée date et la fonction de projection x pour l'ordonnée et la donnée close et la fonction de projection y pour l'abcisse
+// Ici nous définissons la fonction qui sera utilisée pour construire la courbe de notre graphique. Celle-ci utilise
+// la donnée date et la fonction de projection x pour l'ordonnée et la donnée close et la fonction de
+// projection y pour l'abcisse
 const line = d3.line()
     .x(d => x(d.date))
     .y(d => y(d.close));
-// Il nous reste maintenant à créer notre SVG sur le noeud DOM avec l'ID chart. Nous précisons la taille de ce SVG ainsi qu'une fonction de transformation sur le noeud G permettant de tenir compte des marges et de positionner correctement l'ensemble.
+
+// Il nous reste maintenant à créer notre SVG sur le noeud DOM avec l'ID chart. Nous précisons la taille de ce SVG
+// ainsi qu'une fonction de transformation sur le noeud G permettant de tenir compte des marges et de positionner
+// correctement l'ensemble.
 const svg = d3.select("#chart").append("svg")
     .attr("id", "svg")
     .attr("width", width + margin.left + margin.right)
@@ -82,7 +88,18 @@ d3.tsv("d3js/linearchart/data.tsv").then(function(data) {
         .attr("class", "line")
         .attr("d", line);
 });
+var linePathLength = line.node().getTotalLength(); // LIGNE 20
+line
+    .attr("stroke-dasharray", linePathLength)
+    .attr("stroke-dashoffset", linePathLength)
+    .transition()
+    .duration(4000)
+    .ease(d3.easeLinear)
+    .attr("stroke-dashoffset", 0);
 
+
+// gestion du tooltip
+// on ajoute un div pour l'accueillir
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .attr("x", width - 300)
