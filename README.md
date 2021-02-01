@@ -8,7 +8,8 @@ Taken from https://www.datavis.fr/index.php#d3js
 * [datavis.fr - D3JS - Création d'un tooltip avec JQUERY (intégré dans le SVG)](https://sylsta.github.io/D3_template/datavis.fr/tooltip.html)
 * [datavis.fr - D3JS - Ligne (Linear Chart)](https://sylsta.github.io/D3_template/datavis.fr/linearchart.html)
 * [datavis.fr - D3JS - Ligne avancée (Linear Chart)](https://sylsta.github.io/D3_template/datavis.fr/linearchart-improve.html)
-* [datavis.fr - D3JS - Lignes (Linear Chart)](https://sylsta.github.io/datavis.fr/twolinearchart.html)
+* [datavis.fr - D3JS - Lignes (Linear Chart)](https://sylsta.github.io/D3_template/datavis.fr/twolinearchart.html)
+* [datavis.fr - D3JS - Histogramme Empilé (Stacked Bar Chart)](https://sylsta.github.io/D3_template/datavis.fr/stacked-barchart.html) 
 
 #### Cartes :
 * [datavis.fr - D3JS - Carte simple (départements français)](https://sylsta.github.io/D3_template/datavis.fr/map-firststep.html)

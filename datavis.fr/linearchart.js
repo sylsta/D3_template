@@ -87,16 +87,17 @@ d3.tsv("d3js/linearchart/data.tsv").then(function(data) {
         .datum(data)
         .attr("class", "line")
         .attr("d", line);
-});
-var linePathLength = line.node().getTotalLength(); // LIGNE 20
-line
-    .attr("stroke-dasharray", linePathLength)
-    .attr("stroke-dashoffset", linePathLength)
-    .transition()
-    .duration(4000)
-    .ease(d3.easeLinear)
-    .attr("stroke-dashoffset", 0);
 
+});
+// var linePathLength = line.node().getTotalLength(); // LIGNE 20
+// line
+//     .attr("stroke-dasharray", linePathLength)
+//     .attr("stroke-dashoffset", linePathLength)
+//     .transition()
+//     .duration(4000)
+//     .ease(d3.easeLinear)
+//     .attr("stroke-dashoffset", 0);
+//
 
 // gestion du tooltip
 // on ajoute un div pour l'accueillir
@@ -112,49 +113,49 @@ var verticalLine = svg.append("line")
     .attr("x2",0)
     .attr("y2",height)
     .style("opacity", 0);
-
-d3.select("#chart").on("mousemove", function() {
-    // Récupération de la position X & Y de la souris.
-    var mouse_x = d3.mouse(this)[0];
-    var mouse_y = d3.mouse(this)[1];
-
-    // Si la position de la souris est en dehors de la zone du graphique, on arrête le traitement
-    if (mouse_x < margin.left || mouse_x > (width + margin.left) || mouse_y < margin.top || mouse_y > (400 - margin.bottom)) {
-        return ;
-    }
-
-    // Grâce à la fonction 'invert' nous récupérons la date correspondant à notre position
-    // A noter, il faut soustraire la marge à gauche pour que la valeur soit correct.
-    var selectedDate = x.invert(mouse_x - margin.left);
-
-    // Positionnement de la barre verticale toujours en tenant compte de la marge
-    verticalLine.attr("x1", mouse_x - margin.left);
-    verticalLine.attr("x2", mouse_x - margin.left);
-    verticalLine.style("opacity", 1);
-
-    // Le revert est précis à la milliseconde, ce qui n'est pas le cas de nos données
-    selectedDate.setHours(0,0,0,0);
-    var entry = map[selectedDate];
-    if (typeof entry === "undefined") {
-        return ;
-    }
-    // Si une entrée existe pour la date sélectionnée nous pouvons afficher les données.
-
-    // Le comportement est équivalent aux précédents exemples pour le tooltip.
-    div.style("opacity", .9);
-    div.style("left", (d3.event.pageX + 30) + "px")
-        .style("top", (d3.event.pageY - 60) + "px")
-        .html("<b>Date : </b>" + dateFormat(entry.date) + "<br>"
-        + "<b>Cours : </b>" + entry.close + "<br>"
-        + "<b>Volume : </b>" + entry.volume + "<br>");
-}).on("mouseout", function() {
-    var mouse_x = d3.mouse(this)[0];
-    var mouse_y = d3.mouse(this)[1];
-
-    // Si la position de la souris est en dehors de la zone du graphique, on masque la ligne et le tooltip
-    if (mouse_x < margin.left || mouse_x > (width + margin.left) || mouse_y < margin.top || mouse_y > (400 - margin.bottom)) {
-        div.style("opacity", 0);
-        verticalLine.style("opacity", 0);
-    }
-});
+//
+// d3.select("#chart").on("mousemove", function() {
+//     // Récupération de la position X & Y de la souris.
+//     var mouse_x = d3.mouse(this)[0];
+//     var mouse_y = d3.mouse(this)[1];
+//
+//     // Si la position de la souris est en dehors de la zone du graphique, on arrête le traitement
+//     if (mouse_x < margin.left || mouse_x > (width + margin.left) || mouse_y < margin.top || mouse_y > (400 - margin.bottom)) {
+//         return ;
+//     }
+//
+//     // Grâce à la fonction 'invert' nous récupérons la date correspondant à notre position
+//     // A noter, il faut soustraire la marge à gauche pour que la valeur soit correct.
+//     var selectedDate = x.invert(mouse_x - margin.left);
+//
+//     // Positionnement de la barre verticale toujours en tenant compte de la marge
+//     verticalLine.attr("x1", mouse_x - margin.left);
+//     verticalLine.attr("x2", mouse_x - margin.left);
+//     verticalLine.style("opacity", 1);
+//
+//     // Le revert est précis à la milliseconde, ce qui n'est pas le cas de nos données
+//     selectedDate.setHours(0,0,0,0);
+//     var entry = map[selectedDate];
+//     if (typeof entry === "undefined") {
+//         return ;
+//     }
+//     // Si une entrée existe pour la date sélectionnée nous pouvons afficher les données.
+//
+//     // Le comportement est équivalent aux précédents exemples pour le tooltip.
+//     div.style("opacity", .9);
+//     div.style("left", (d3.event.pageX + 30) + "px")
+//         .style("top", (d3.event.pageY - 60) + "px")
+//         .html("<b>Date : </b>" + dateFormat(entry.date) + "<br>"
+//         + "<b>Cours : </b>" + entry.close + "<br>"
+//         + "<b>Volume : </b>" + entry.volume + "<br>");
+// }).on("mouseout", function() {
+//     var mouse_x = d3.mouse(this)[0];
+//     var mouse_y = d3.mouse(this)[1];
+//
+//     // Si la position de la souris est en dehors de la zone du graphique, on masque la ligne et le tooltip
+//     if (mouse_x < margin.left || mouse_x > (width + margin.left) || mouse_y < margin.top || mouse_y > (400 - margin.bottom)) {
+//         div.style("opacity", 0);
+//         verticalLine.style("opacity", 0);
+//     }
+//});
 
