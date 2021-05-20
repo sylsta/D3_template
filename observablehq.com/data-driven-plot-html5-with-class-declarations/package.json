@@ -1,0 +1,14 @@
+{
+  "name": "@khlick/data-driven-plot-html5-with-class-declarations",
+  "main": "7985492bc92fa35d@257.js",
+  "version": "257.0.0",
+  "homepage": "https://observablehq.com/@khlick/data-driven-plot-html5-with-class-declarations",
+  "author": {
+    "name": "Khris Griffis",
+    "url": "https://observablehq.com/@khlick"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@khlick/zoomable-line-marker-chart-with-canvas",
+  "main": "533f245860afc95a@2300.js",
+  "version": "2300.0.0",
+  "homepage": "https://observablehq.com/@khlick/zoomable-line-marker-chart-with-canvas",
+  "author": {
+    "name": "Khris Griffis",
+    "url": "https://observablehq.com/@khlick"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

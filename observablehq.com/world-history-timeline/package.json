@@ -1,0 +1,14 @@
+{
+  "name": "@tezzutezzu/world-history-timeline",
+  "main": "6f8f62930d4149f9@819.js",
+  "version": "819.0.0",
+  "homepage": "https://observablehq.com/@tezzutezzu/world-history-timeline",
+  "author": {
+    "name": "Danilo Di Cuia",
+    "url": "https://observablehq.com/@tezzutezzu"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

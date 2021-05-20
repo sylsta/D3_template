@@ -1,0 +1,23 @@
+unzip SQLeoVQB.yyyy.mm.rcz.zip
+open the command line tool
+cd <path to SQLeoVQB.yyyy.mm.rcz folder>
+
+#java 8
+	java -jar SQLeoVQB.jar
+
+
+#java 9, 10
+
+	java --add-modules="java.xml.bind" -jar SQLeoVQB.jar
+
+
+#java 11
+
+	#on windows
+
+		java -cp "SQLeoVQB.jar;lib/*"  com.sqleo.environment.Application
+
+
+	on Linux, MacOS
+
+		java -cp "SQLeoVQB.jar:lib/*"  com.sqleo.environment.Application

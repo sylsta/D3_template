@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pivot Demo</title>
+        <link rel="stylesheet" type="text/css" href="./PivotDemo_files/pivot.css">
+		<script type="text/javascript" src="./PivotDemo_files/jsapi"></script>
+        <script type="text/javascript" src="./PivotDemo_files/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="./PivotDemo_files/jquery-ui-1.9.2.custom.min.js"></script>
+        <script type="text/javascript" src="./PivotDemo_files/pivot.js"></script>
+		<script type="text/javascript" src="./PivotDemo_files/gchart_renderers.js"></script>
+        <style>
+            * {font-family: Verdana;}
+        </style>
+		
+    </head>
+    <body>
+        <h3><a href="https://github.com/nicolaskruchten/pivottable">PivotTable.js</a> with preloaded data. Tested with Firefox and Chrome (Internet Explorer is not supported)</h3>
+
+		<div id="output" style="margin: 10px;"></div>
+        <br>
+		
+		<div style="display:none">
+        <h3>Input table:</h3>
+		<script src="pivotInputTable.js"></script>
+		</div>
+		
+		<script type="text/javascript">
+			google.load("visualization", "1", {packages:["corechart", "charteditor"]});
+            $(function(){
+				var derivers = $.pivotUtilities.derivers;
+                var renderers = $.extend($.pivotUtilities.renderers, 
+                    $.pivotUtilities.gchart_renderers);
+
+				var input = $("#input");
+                $("#output").pivotUI(input, {
+					renderers: renderers
+				}
+				);
+             });
+        </script>
+	</body>
+</html>

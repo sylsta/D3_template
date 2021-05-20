@@ -1,0 +1,5 @@
+join;join_type;table_owner;table;column;ref_table_owner;ref_table;ref_table_Alias;ref_column;comment
+DIM1_SOURCE;INNER;;DIM1;SOURCE_ID;;SOURCE;source_1;SOURCE_ID;
+DIM2_SOURCE;FULL;;DIM2;SOURCE_ID;;SOURCE;source_2;SOURCE_ID;
+FACT_DIM1;LEFT;;FACT;ID1;;DIM1;;ID;
+FACT_DIM2;RIGHT;;FACT;ID2;;DIM2;;ID;

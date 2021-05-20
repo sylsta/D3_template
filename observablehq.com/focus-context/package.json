@@ -1,0 +1,14 @@
+{
+  "name": "@d3/focus-context",
+  "main": "4af7d851c2113a7e@326.js",
+  "version": "326.0.0",
+  "homepage": "https://observablehq.com/@d3/focus-context",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

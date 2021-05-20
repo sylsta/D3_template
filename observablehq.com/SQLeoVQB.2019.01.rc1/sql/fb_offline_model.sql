@@ -1,0 +1,8 @@
+SELECT
+'echo '||list( trim( RDB$FIELD_NAME ) ) ||'> '||trim(RDB$RELATION_NAME)||'.csv'
+FROM
+     RDB$RELATION_FIELDS
+WHERE
+     RDB$SYSTEM_FLAG = 0
+GROUP BY
+     RDB$RELATION_NAME

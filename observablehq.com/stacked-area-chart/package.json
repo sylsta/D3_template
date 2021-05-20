@@ -1,0 +1,14 @@
+{
+  "name": "@d3/stacked-area-chart",
+  "main": "d27bb60a370aa17d@445.js",
+  "version": "445.0.0",
+  "homepage": "https://observablehq.com/@d3/stacked-area-chart",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

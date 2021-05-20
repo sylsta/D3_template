@@ -1,0 +1,14 @@
+{
+  "name": "2849c59d85d90d30",
+  "main": "2849c59d85d90d30@297.js",
+  "version": "297.0.0",
+  "homepage": "https://observablehq.com/d/2849c59d85d90d30",
+  "author": {
+    "name": "Sylther",
+    "url": "https://observablehq.com/@sylsta"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
