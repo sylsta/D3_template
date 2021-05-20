@@ -21,4 +21,8 @@ Taken from https://www.datavis.fr/index.php#d3js
 sed -i "s/ //g" pop_departements_anamorphose2.json
 sed -i "s/\([0-9]*\.[0-9][0-9]\)[0-9]*/\1/g" pop_departements_anamorphose2.json 
 
+mapshaper COMMUNE.shp -simplify 20% COMMUNE20.shp
+mapshaper COMMUNE.shp -simplify 10% stats -o COMMUNE20.shp
+mapshaper COMMUNE.shp -simplify 5% stats -o COMMUNE5.shp
+mapshaper COMMUNE.shp -simplify 3% stats -o COMMUNE3.shp
 
