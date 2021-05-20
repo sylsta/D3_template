@@ -14,7 +14,7 @@ Taken from https://www.datavis.fr/index.php#d3js
 #### Cartes :
 * [datavis.fr - D3JS - Carte simple (départements français)](https://sylsta.github.io/D3_template/datavis.fr/map-firststep.html)
 * [datavis.fr - D3JS - Carte choroplèthe (Densité de la population française par département)](https://sylsta.github.io/D3_template/datavis.fr/map-population.html)
-* [datavis.fr - D3JS - Carte choroplèthe non linéaire (Nombre de prix nobel par pays)](https://sylsta.github.io/D3_template/D3_template/datavis.fr/map-nobelprice.html)
+* [datavis.fr - D3JS - Carte choroplèthe non linéaire (Nombre de prix nobel par pays)](https://sylsta.github.io/D3_template/datavis.fr/map-nobelprice.html)
 * [datavis.fr - D3JS - Carte - Projection orthographique et rotation (Température moyenne par pays)](https://sylsta.github.io/D3_template/datavis.fr/map-world-temperature.html)
 * [datavis.fr - D3JS - Carte Avancée (Comprendre les nuances de couleurs, construire une légende agréable et être pertinent dans une cartographie)](https://sylsta.github.io/D3_template/datavis.fr/map-improve.html)
 
